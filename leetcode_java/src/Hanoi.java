@@ -2,7 +2,6 @@
  * 汉诺塔问题
  */
 public class Hanoi {
-    // 写一个构造函数
 
     public static void main(String[] args) {
         Hanoi hanoi = new Hanoi();
@@ -22,11 +21,12 @@ public class Hanoi {
     }
 
     public void hanoiHelper(int n, String from, String to, String other) {
-        if (n == 1) {
+        if(n == 1) {
             System.out.println(n + from + "-->" + to);
-            totalStep++;
+            this.totalStep++;
             return;
         }
+
 
         hanoiHelper(n - 1, from, other, to);
         System.out.println(n + from + "-->" + to);
